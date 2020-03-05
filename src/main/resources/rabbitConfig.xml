@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:rabbit="http://www.springframework.org/schema/rabbit"
-       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/rabbit
-        http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd
-        http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop.xsd">
+        http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd">
 
     <!-- 配置RabbitMQ连接工厂，用于获取RabbitMQ连接 -->
     <rabbit:connection-factory id="connectionFactory"
-                               host="localhost"
+                               host="10.246.103.31"
                                port="5672"
-                               username="guest"
-                               password="guest"
+                               username="access_dev"
+                               password="Netease163#Access"
+                               virtual-host="/access"
     />
 
     <!-- RabbitMQ监听器 -->
@@ -28,7 +23,7 @@
     <rabbit:admin connection-factory="connectionFactory" />
 
     <!-- RabbitMQ队列 -->
-    <rabbit:queue id="spittleAlertQueue" name="spittle.alerts" />
+    <rabbit:queue name="spittle.alerts" />
 
     <rabbit:queue name="spittle.alert.queue.1" />
     <rabbit:queue name="spittle.alert.queue.2" />
@@ -69,7 +64,7 @@
                             routing-key="spittle.alerts"/>
 
     <!-- RabbitMQ监听器容器 -->
-    <rabbit:listener-container connection-factory="connectionFactory">
+    <rabbit:listener-container id="listenerContainer" connection-factory="connectionFactory">
         <rabbit:listener ref="spittleListener"
                          method="handleSpittleAlert"
                          queue-names="spittle.alert.queue.1,spittle.alert.queue.2,spittle.alerts" />
