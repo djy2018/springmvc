@@ -19,7 +19,7 @@
     <bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory"
           p:brokerURL="tcp://localhost:61616" />
 
-    <bean id="spittleHandler" class="com.wisely.highlight_springmvc4.message.jms.SpittleAlertHandler" />
+    <bean id="spittleHandler" class="com.wisely.springmvc.message.jms.SpittleAlertHandler" />
 
     <jms:listener-container connection-factory="connectionFactory">
         <jms:listener destination="spittle.alert.queue" ref="spittleHandler" method="handleSpittleAlert"/>

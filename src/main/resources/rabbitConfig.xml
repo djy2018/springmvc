@@ -22,7 +22,7 @@
     />
 
     <!-- RabbitMQ监听器 -->
-    <bean id="spittleListener" class="com.wisely.highlight_springmvc4.message.rabbit.SpittleAlertHandler" />
+    <bean id="spittleListener" class="com.wisely.springmvc.message.rabbit.SpittleAlertHandler" />
 
     <!-- 作用：创建一个RabbitMQ管理组件，它会自动创建元素对应的队列、Exchange以及bing -->
     <rabbit:admin connection-factory="connectionFactory" />
