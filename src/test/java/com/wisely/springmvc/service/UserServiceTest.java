@@ -1,6 +1,5 @@
-package com.wisely.highlight_springmvc4.service;
+package com.wisely.springmvc.service;
 
-import com.wisely.springmvc.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +10,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(value = {"com.wisely.highlight_springmvc4.service"})
+@ComponentScan(value = {"com.wisely.springmvc.service"})
 public class UserServiceTest {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.wisely.highlight_springmvc4;
+package com.wisely.springmvc;
 
 import org.junit.runner.RunWith;
 import org.springframework.context.annotation.ComponentScan;

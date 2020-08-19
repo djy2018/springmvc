@@ -10,7 +10,7 @@
                  http://www.springframework.org/schema/aop
                  http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-    <context:component-scan  base-package="com.wisely.highlight_springmvc4.service" />
+    <context:component-scan  base-package="com.wisely.springmvc.service" />
 
     <bean id="aopServiceImpl" class="com.wisely.springmvc.service.impl.AopServiceImpl"/>
 
@@ -18,7 +18,7 @@
 
     <aop:config proxy-target-class="false">
         <aop:aspect id="time" ref="timeHandlerAspect">
-            <aop:pointcut id="addAllMethod" expression="execution(* com.wisely.highlight_springmvc4.service..*.*(..))"/>
+            <aop:pointcut id="addAllMethod" expression="execution(* com.wisely.springmvc.service..*.*(..))"/>
             <aop:before method="printTime" pointcut-ref="addAllMethod"/>
             <aop:after method="printTime" pointcut-ref="addAllMethod"/>
         </aop:aspect>

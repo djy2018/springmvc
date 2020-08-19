@@ -1,4 +1,4 @@
-package com.wisely.highlight_springmvc4;
+package com.wisely.springmvc;
 
 
 import com.wisely.springmvc.interceptor.DemoInterceptor;
@@ -22,7 +22,7 @@ import java.util.List;
 @Configuration
 @EnableWebMvc //开启对SpringMVC支持，若无此句，重写WebMvcConfigurerAdapter方法无效
 @EnableScheduling //开启计划任务的支持
-@ComponentScan("com.wisely.highlight_springmvc4")
+@ComponentScan("com.wisely.springmvc")
 public class MyMvcConfig extends WebMvcConfigurerAdapter{
 
     @Bean

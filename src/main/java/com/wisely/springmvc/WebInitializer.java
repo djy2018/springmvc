@@ -1,6 +1,4 @@
 package com.wisely.springmvc;
-
-import com.wisely.highlight_springmvc4.MyMvcConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;

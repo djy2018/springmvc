@@ -1,6 +1,5 @@
-package com.wisely.highlight_springmvc4.service;
+package com.wisely.springmvc.service;
 
-import com.wisely.springmvc.service.AopJdkService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

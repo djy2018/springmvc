@@ -1,8 +1,7 @@
-package com.wisely.highlight_springmvc4.jdk;
+package com.wisely.springmvc.jdk;
 
-import com.wisely.highlight_springmvc4.web.ch4_6.MyRestController;
+import com.wisely.springmvc.web.ch4_6.MyRestController;
 import org.junit.Test;
-import org.springframework.web.method.HandlerMethod;
 
 import java.util.StringTokenizer;
 
