@@ -17,11 +17,16 @@ import java.util.concurrent.ThreadPoolExecutor;
  * Created by dujiayong on 2020/3/1.
  */
 @Configuration
-@EnableAsync
+@EnableAsync // 开启对异步任务支持
 public class MyThreadPoolExecutor implements AsyncConfigurer{
 
     private static final Logger log = LoggerFactory.getLogger(MyThreadPoolExecutor.class);
 
+    /**
+     * 实现AsyncConfigurer接口，重写getAsyncExecutor方法，自定义线程池
+     * 重写getAsyncUncaughtExceptionHandler，自定义异常处理类
+     * @return
+     */
     @Bean(name = "asyncExecutor")
     @Override
     public Executor getAsyncExecutor() {
@@ -36,8 +41,12 @@ public class MyThreadPoolExecutor implements AsyncConfigurer{
         return asyncExecutor;
     }
 
+    /**
+     * 自定义线程池:ThreadPoolTaskExecutor，返回参数类型:ThreadPoolTaskExecutor
+     * @return
+     */
     @Bean(name = "threadPoolTaskExecutor")
-    public Executor getThreadPoolTaskExecutor() {
+    public ThreadPoolTaskExecutor threadPoolTaskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(10);
         executor.setMaxPoolSize(100);

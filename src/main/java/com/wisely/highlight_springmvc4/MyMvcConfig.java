@@ -5,6 +5,7 @@ import com.wisely.highlight_springmvc4.messageconverter.MyMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.multipart.MultipartResolver;
@@ -22,6 +23,7 @@ import java.util.List;
 @EnableWebMvc //开启对SpringMVC支持，若无此句，重写WebMvcConfigurerAdapter方法无效
 @EnableScheduling //开启计划任务的支持
 @ComponentScan("com.wisely.highlight_springmvc4")
+@EnableAspectJAutoProxy
 public class MyMvcConfig extends WebMvcConfigurerAdapter{
 
     @Bean

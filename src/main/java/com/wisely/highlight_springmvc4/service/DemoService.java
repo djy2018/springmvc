@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 public class DemoService {
 
     public String saySomething(){
+        System.out.println("hello world!!!");
         return "hello";
     }
+
 }
