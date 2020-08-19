@@ -7,8 +7,17 @@
     <title>Insert title here</title>
 </head>
 <body>
-    <pre>
-        Welcome to Spring MVC world
-    </pre>
+    <form method="post" action="/springmvc/testModelAttribute">
+        <input type="hidden" name="id" value="1" />
+        <br>
+        <br>
+        <input type="text" name="username" value="djy" />
+        <br>
+        <input type="text" name="email" value="960925yong@gmail.com" />
+        <br>
+        <input type="text" name="age" value="15" />
+        <br>
+        <input type="submit" value="Submit" />
+    </form>
 </body>
 </html>

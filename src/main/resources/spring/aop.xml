@@ -12,9 +12,9 @@
 
     <context:component-scan  base-package="com.wisely.highlight_springmvc4.service" />
 
-    <bean id="aopServiceImpl" class="com.wisely.highlight_springmvc4.service.impl.AopServiceImpl"/>
+    <bean id="aopServiceImpl" class="com.wisely.springmvc.service.impl.AopServiceImpl"/>
 
-    <bean id="timeHandlerAspect" class="com.wisely.highlight_springmvc4.service.aspect.TimeHandlerAspect"/>
+    <bean id="timeHandlerAspect" class="com.wisely.springmvc.service.aspect.TimeHandlerAspect"/>
 
     <aop:config proxy-target-class="false">
         <aop:aspect id="time" ref="timeHandlerAspect">
