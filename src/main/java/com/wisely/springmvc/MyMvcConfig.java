@@ -24,6 +24,10 @@ import java.util.List;
 @ComponentScan("com.wisely.springmvc")
 public class MyMvcConfig extends WebMvcConfigurerAdapter{
 
+    /**
+     * 配置视图解析器
+     * @return
+     */
     @Bean
     public InternalResourceViewResolver viewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
