@@ -1,5 +1,6 @@
 package com.wisely.springmvc;
 
+
 import com.wisely.springmvc.interceptor.DemoInterceptor;
 import com.wisely.springmvc.messageconverter.MyMessageConverter;
 import org.springframework.context.annotation.Bean;
@@ -24,10 +25,6 @@ import java.util.List;
 @ComponentScan("com.wisely.springmvc")
 public class MyMvcConfig extends WebMvcConfigurerAdapter{
 
-    /**
-     * 配置视图解析器
-     * @return
-     */
     @Bean
     public InternalResourceViewResolver viewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
