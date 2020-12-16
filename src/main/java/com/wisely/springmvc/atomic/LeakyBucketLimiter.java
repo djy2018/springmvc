@@ -8,6 +8,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 漏桶算法
+ *
  * @author dujiayong
  * @date 2020/12/16 16:18
  */

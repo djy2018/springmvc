@@ -10,7 +10,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
+ * 令牌桶算法：自行实现
  * Source:https://xilidou.com/2018/02/01/java-cas/
+ * <p>
+ * guava 谷歌实现：{@link com.google.common.util.concurrent.RateLimiter}
  *
  * @author dujiayong
  * @date 2020/12/14 10:55
