@@ -31,6 +31,9 @@ public class LeakyBucketLimiter {
     // 最后一次加水时间
     public long lastTime = System.currentTimeMillis();
 
+    /**
+     * 线程池每 1s 发送随机数量的请求，每次请求计算当前桶内的水量及剩余容量，请求数量超出当前桶容量，则产生限
+     */
     public void acquire() {
         Runnable task = () -> {
             long now = System.currentTimeMillis();
